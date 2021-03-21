@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; }
+body,html { width: 100%; }
+ul { list-style-type: none; }
+a { text-decoration: none; }
+
+.wrap { width: 100vw; height: 100vh; }
+clr { clear: both; }
+clr:after { content:" "; clear:both; display: block; }
+
+/*left_fix*/
+.left_fix { width: 20vw; height:100%; background-color: #000; position: fixed; left: 0; top: 0; z-index: 99; position:relative; float: left;}
+.left_fix .tnb { font-size: 25px; padding-top: 50px; padding-left: 50px; box-sizing: border-box; }
+.left_fix .tnb li { position: relative; }
+.left_fix .tnb li a { display: block; line-height: 2.0; color: #aaa; font-weight: 700}
+
+/* 서브메뉴 */
+.left_fix .tnb .sub { position:absolute; display: none; top: 9px; left: 170px; }
+.left_fix .tnb .sub a { display: block; font-size: 19px; }
+.left_fix .tnb li a:hover { color: #fff; }
+.left_fix .tnb li:hover  .sub { display: block; }
+
+.left_fix .ft { width: 100%; height: 20%; position:absolute; bottom:100px; left: 0; color: #fff;  box-sizing: border-box; padding-left:50px; }
+.left_fix .ft .tit { line-height: 2.0; }
+.left_fix .ft p { line-height: 2.0 ; }
+.left_fix .ft .ft_box .sns { padding-top: 30px;}
+.left_fix .ft .ft_box .sns li { float: left; width: 80px;  }
+
+.left_fix .ft .ft_box .sns li a { display: block; float: left; text-indent: -9999px; width: 50px; height: 50px; border-radius:35px; border: 2px solid #fff;  background-color: #fff;}
+.left_fix .ft .ft_box .sns li.sns1 a { background-image: url("../sns/face.png"); background-color: #fff;}
+.left_fix .ft .ft_box .sns li.sns1 a:hover { border-color: #3a5a9b; background-color:#3a5a9b; }
+.left_fix .ft .ft_box .sns li.sns2 a { background-image: url("../sns/insta.png");}
+.left_fix .ft .ft_box .sns li.sns2 a:hover { border-color: #86358d; background-color:#86358d; }
+.left_fix .ft .ft_box .sns li.sns3 a { background-image: url("../sns/kakao.png");}
+.left_fix .ft .ft_box .sns li.sns3 a:hover {border-color: #f8ef2c; background-color:#f8ef2c; }
+.left_fix .ft .ft_box .sns li.sns4 a { background-image: url("../sns/logo2.png"); background-color: #686969}
+.left_fix .ft .ft_box .sns li.sns4 a:hover{ background-color:  #686969; border-color:#c40016; background-image: url("../sns/logo3.png"); }
+
+
+.content { width: 79vw; height: 100vh;  background-color: #000; margin-left:21vw; }
+.content .con_box { width: 100%; }
+.content .con_box .hd{ width: 100%; }
+.content .con_box .hd .logo { width: 600px; margin: 0 auto; padding-top: 30px; }
+.content .con_box .hd .logo a { display: block; width: 300px; height: 100px; background-image: url("../logo/logo_ws.png"); text-indent: -9999px; }
+.content .con_box .hd p.gw_fix { position:fixed; right: 0; top: 0; color:#fff; }
+
+.fnb_fix { float: left; position: fixed; bottom: 0; right: 0;   }
