@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; }
+body,html { width: 100%; }
+ul { list-style-type: none; }
+a { text-decoration: none; }
+
+.wrap { width: 100vw; height: 100vh; }
+clr { clear: both; }
+clr:after { content:" "; clear:both; display: block; }
+
+/*left_fix*/
+.left_fix { width: 20vw; height:100%; background-color: #000; position: fixed; left: 0; top: 0; z-index: 99; position:relative; float: left; }
+.left_fix .tnb { font-size: 25px; padding-top: 50px; padding-left: 20px; height: 250px;box-sizing: border-box; position: relative;}
+.left_fix .tnb li label { width: 100%; display: block; line-height: 2.0; color: #aaa; font-weight: 700; cursor: pointer;padding-left: 25px; box-sizing: border-box; }
+.left_fix .tnb li label:hover { color:#fff; }
+
+/* 서브메뉴: ul.에 공통 포지션 주면 됨*/
+.tnb .sub { position:absolute; height:200px;  left: 60px; top: 290px; transition: 0.4s; opacity: 0; visibility: hidden; color: #fff; }
+
+#r1:checked ~ .tnb .lst1 label { background-color: rgba(255,255,255,0.2); color:#fff;   }
+#r2:checked ~ .tnb .lst2 label { background-color: rgba(255,255,255,0.2); color:#fff; }
+#r3:checked ~ .tnb .lst3 label { background-color: rgba(255,255,255,0.2); color:#fff; }
+#r4:checked ~ .tnb .lst4 label { background-color: rgba(255,255,255,0.2); color:#fff; }
+
+#r1:checked ~ .tnb .lst1 .sub { opacity: 1; visibility: visible; }
+#r2:checked ~ .tnb .lst2 .sub { display: block; opacity: 1; visibility: visible; }
+#r3:checked ~ .tnb .lst3 .sub { display: block; opacity: 1; visibility: visible;  }
+#r4:checked ~  .tnb .lst4 .sub { display: block; opacity: 1; visibility: visible; }
+.left_fix .radio { display: none; }
+
+.left_fix .tnb .sub a { display: block; font-size: 19px; color: #aaa; line-height: 2.0; font-size: 20px; font-weight: 600;}
+.left_fix .tnb li a:hover { color: #fff; }
+
+
+
+/*ft*/
+.ft { width: 100%;  height: 20%; position: fixed; bottom: 8%; left: 0; z-index: 99; box-sizing: border-box; padding-left:50px; color: #fff;}
+.ft .tit { line-height: 2.0; }
+
+.ft p { line-height: 2.0 ;  }
+.ft p.add { width: 22vw;}
+.ft p.call:before { content: ""; display: block; width: 15px; height:15px; background-image: url("../sns/tell_s.png"); float: left; margin:10px 0 ;  margin-right: 10px; background-color: #fff; border-radius: 20px;}
+.ft .ft_box .sns { padding-top: 10px;}
+.ft .ft_box .sns li { float: left; width: 80px;  }
+
+.ft .ft_box .sns li a { display: block; float: left; text-indent: -9999px; width: 50px; height: 50px; border-radius:35px; border: 2px solid #fff;  background-color: #fff;}
+.ft .ft_box .sns li.sns1 a { background-image: url("../sns/face.png"); background-color: #fff;}
+.ft .ft_box .sns li.sns1 a:hover { border-color: #3a5a9b; background-color:#3a5a9b; }
+.ft .ft_box .sns li.sns2 a { background-image: url("../sns/insta.png");}
+.ft .ft_box .sns li.sns2 a:hover { border-color: #86358d; background-color:#86358d; }
+.ft .ft_box .sns li.sns3 a { background-image: url("../sns/kakao.png");}
+.ft .ft_box .sns li.sns3 a:hover {border-color: #f8ef2c; background-color:#f8ef2c; }
+.ft .ft_box .sns li.sns4 a { background-image: url("../sns/logo2.png"); background-color: #686969}
+.ft .ft_box .sns li.sns4 a:hover{ background-color:  #686969; border-color:#c40016; background-image: url("../sns/logo3.png"); }
+
+/*fnb_fix*/
+
+.fnb_fix { float: left; position: fixed; bottom:5%; right: 20px; width: 14%; height: 15%;  }
+.fnb_fix .info,.fnb_fix .info2 { width: 100%; height: 25%;  }
+.fnb_fix .info li{ width: 30%; height: 100%; float:left; }
+.fnb_fix .info li a { display: block; width: 100%; height: 100%;  color:#aaa; }
+
+.fnb_fix .info li a:hover { color: #fff; font-weight: 700; }
+
+.fnb_fix .info2 li { width: 50%; height: 100%; float:left; }
+.fnb_fix .info2 li a { display: block; width: 100%;     height: 100%; line-height: 2; color:#aaa; float:left; font-size: 13px; }
+.fnb_fix .info2 li.lst1 a:after { content:"|"; padding-left: 10%; box-sizing: border-box; }
+.fnb_fix .info2 li a:hover { color: #fff; font-weight: 700; }
+
+.fnb_fix p.copy { width: 75%; color: #aaa; line-height: 2.0; font-size: 13px;}
+.fnb_fix p.copy2 { width: 100%; color: #aaa; line-height: 2.0; font-size: 13px;}
+
+@media screen and (max-width:767px) {
+    
+.left_fix { width: 100vw; height:20%; background-color: #000; position: fixed; left: 0; top: 0; z-index: 99; float: left;}
+.left_fix .tnb { width: 100vw; height: 100%; font-size:15px; padding: 0;  box-sizing: border-box;  margin: 0 auto;}
+.left_fix .tnb li { width: 25%; float:left; position: relative; padding: 0; text-align: center;  }
+.left_fix .tnb li label {  display: block;  width:100%;  line-height: 2.0;  font-weight: 700; cursor: pointer;  box-sizing: border-box; padding: 5%;  }
+.left_fix .tnb li label:hover { color:#fff; }
+
+/* 서브메뉴: ul.에 공통 포지션 주면 됨*/
+.left_fix .tnb .sub { position:absolute; width: 100%; height:150px; top: 100%; left: 0; transition: 0.4s; opacity: 0; visibility: hidden; color: #fff;  border-bottom: 2px solid #ddd; padding-top: 10%; box-sizing: border-box;}
+/* 백그라운드 깔아주기 각각 서브배경에 하나의 그림으로! */
+.left_fix .tnb .sub li { clear:both; width: 100%; background-color:rgba(0,0,0,0.6);}
+
+.left_fix .tnb .sub a { display: block; width: 100%;  font-size: 15px; color: #aaa; line-height: 2.0;  font-weight: 600;}    
+
+.left_fix .tnb li label { width: 100%; display: block; line-height: 2.0; color: #aaa; font-weight: 700; cursor: pointer;padding-left: 25px; box-sizing: border-box; }
+.left_fix .tnb li label:hover { color:#fff; }
+
+
+/*ft*/
+.ft { width: 100vw;  height: 25%; position: fixed; bottom: 25%; left: 0; z-index: 99; box-sizing: border-box; padding-left:5%; color: #fff; position:relative; }
+.ft .tit { line-height: 2.0; font-size: 18px;}
+
+.ft p { float: left; line-height: 1.5; margin-right: 1%; }
+.ft p.add { width: 100%; }
+.ft p.add2 { float:left; width: 30%; } 
+.ft p.add3  { width: 50%; }
+.ft p.call:before { content: ""; display: block; width: 15px; height:15px; background-image: url("../sns/tell_s.png"); float: left; margin:3% ;  margin-right: 10px; background-color: #fff; border-radius: 20px;}
+.ft p.call { width: 30%; clear: both; }
+
+.ft .ft_box .sns { position:absolute;  padding: 0; right: 10%; bottom: 15%;}
+.ft .ft_box .sns li { float: left; width: 30px }
+
+.ft .ft_box .sns li a { display: block; float: left; text-indent: -9999px; width: 20px; height: 20px; border-radius:35px; border: 2px solid #fff;  background-color: #fff;}
+.ft .ft_box .sns li.sns1 a { background-image: url("../sns/face_m.png"); background-color: #fff;}
+.ft .ft_box .sns li.sns1 a:hover { border-color: #3a5a9b; background-color:#3a5a9b; }
+.ft .ft_box .sns li.sns2 a { background-image: url("../sns/insta_m.png");}
+.ft .ft_box .sns li.sns2 a:hover { border-color: #86358d; background-color:#86358d; }
+.ft .ft_box .sns li.sns3 a { background-image: url("../sns/kakao_m.png");}
+.ft .ft_box .sns li.sns3 a:hover {border-color: #f8ef2c; background-color:#f8ef2c; }
+
+
+/*fnb_fix*/
+
+.fnb_fix { clear:both; position:relative; margin-left: 3%; float: left;   width: 100%; height: 25%;  }
+.fnb_fix .info { width: 30%; height: 100%; float:left; }
+.fnb_fix .info2 { width: 55%; height: 100%; float:left; margin-left: 1%; }
+.fnb_fix .info li{ width: 50%; height:100%; float:left; }
+.fnb_fix .info li a { display: block; width: 100%; height: 100%; line-height: 2; color:#aaa; }
+
+.fnb_fix .info li a:hover { color: #fff; font-weight: 700; }
+
+.fnb_fix .info2 li { width: 40%; height: 100%; float:left; }
+.fnb_fix .info2 li.lst1 { width: 60%; }
+.fnb_fix .info2 li a { display: block; width: 100%;     height: 100%; line-height: 2; color:#aaa; float:left; font-size: 16px;  }
+.fnb_fix .info2 li.lst1 a:after { content:"|"; padding-left: 10%; box-sizing: border-box; font-size: 16px; }
+.fnb_fix .info2 li a:hover { color: #fff; font-weight: 700; }
+.fnb_fix p.copy { clear:both; color: #aaa; line-height: 2.0; font-size: 13px; padding-top: 1%;}
+
+    
+}
+
+/* 탭부분 */
+@media screen and (min-width:768px) and (max-width:960px) {
+
+.left_fix { width: 100vw; height:20%; background-color: #000; position: fixed; left: 0; top: 0; z-index: 99; float: left;}
+.left_fix .tnb { width: 100vw; height: 100%; font-size: 25px; padding: 0;  box-sizing: border-box;  margin: 0 auto;}
+.left_fix .tnb li { width: 25%; float:left; position: relative; padding: 0; text-align: center;  }
+.left_fix .tnb li label {  display: block;  width:100%;  line-height: 2.0;  font-weight: 700; cursor: pointer;  box-sizing: border-box; padding: 5%;  }
+.left_fix .tnb li label:hover { color:#fff; }
+
+/* 서브메뉴: ul.에 공통 포지션 주면 됨*/
+.left_fix .tnb .sub { position:absolute; width: 100%; height:160px; top: 100%; left: 0; transition: 0.4s; opacity: 0; visibility: hidden; color: #fff;  border-bottom: 2px solid #ddd; padding-top: 3%; box-sizing: border-box;}
+/* 백그라운드 깔아주기 각각 서브배경에 하나의 그림으로! */
+.left_fix .tnb .sub li { clear:both; width: 100%; background-color:rgba(0,0,0,0.6);}
+
+.left_fix .tnb .sub a { display: block; width: 100%;  color: #aaa; line-height: 2.0; font-size: 18px; font-weight: 600;}    
+
+.left_fix .tnb li label { width: 100%; display: block; line-height: 2.0; color: #aaa; font-weight: 700; cursor: pointer;padding-left: 25px; box-sizing: border-box; }
+.left_fix .tnb li label:hover { color:#fff; }
+
+
+/*ft*/
+.ft { width: 100vw;  height: 10%; position: fixed; bottom: 20%; left: 0; z-index: 99; box-sizing: border-box; padding-left:50px; color: #fff; position:relative; }
+.ft .tit { line-height: 2.0; font-size: 18px;}
+
+.ft p { float: left; line-height: 1.5; margin-right: 1%; }
+.ft p.add { width: 30%; }
+.ft p.add1 { width: 15%; } 
+.ft p.add2  { width: 15%;}
+.ft p.call:before { content: ""; display: block; width: 15px; height:15px; background-image: url("../sns/tell_s.png"); float: left; margin:3% ;  margin-right: 10px; background-color: #fff; border-radius: 20px;}
+.ft p.call { width: 20%; float:left; }
+
+.ft .ft_box .sns { position:absolute;  padding: 0; right: 5%; top: 100%;}
+.ft .ft_box .sns li { float: left; width: 80px;  }
+
+.ft .ft_box .sns li a { display: block; float: left; text-indent: -9999px; width: 50px; height: 50px; border-radius:35px; border: 2px solid #fff;  background-color: #fff;}
+.ft .ft_box .sns li.sns1 a { background-image: url("../sns/face.png"); background-color: #fff;}
+.ft .ft_box .sns li.sns1 a:hover { border-color: #3a5a9b; background-color:#3a5a9b; }
+.ft .ft_box .sns li.sns2 a { background-image: url("../sns/insta.png");}
+.ft .ft_box .sns li.sns2 a:hover { border-color: #86358d; background-color:#86358d; }
+.ft .ft_box .sns li.sns3 a { background-image: url("../sns/kakao.png");}
+.ft .ft_box .sns li.sns3 a:hover {border-color: #f8ef2c; background-color:#f8ef2c; }
+.ft .ft_box .sns li.sns4 a { background-image: url("../sns/logo2.png"); background-color: #686969}
+.ft .ft_box .sns li.sns4 a:hover{ background-color:  #686969; border-color:#c40016; background-image: url("../sns/logo3.png"); }
+
+/*fnb_fix*/
+
+.fnb_fix { clear:both; position:relative; margin-left: 3%; float: left;   width: 100%; height: 25%;  }
+.fnb_fix .info { width: 20%; height: 100%; float:left; }
+.fnb_fix .info2 { width: 40%; height: 100%; float:left; }
+.fnb_fix .info li{ width: 50%; height:100%; float:left; }
+.fnb_fix .info li a { display: block; width: 100%; height: 100%; line-height: 2; color:#aaa; }
+
+.fnb_fix .info li a:hover { color: #fff; font-weight: 700; }
+
+.fnb_fix .info2 li { width: 50%; height: 100%; float:left; }
+.fnb_fix .info2 li a { display: block; width: 100%;     height: 100%; line-height: 2; color:#aaa; float:left; font-size: 16px;  }
+.fnb_fix .info2 li.lst1 a:after { content:"|"; padding-left: 10%; box-sizing: border-box; font-size: 16px; }
+.fnb_fix .info2 li a:hover { color: #fff; font-weight: 700; }
+.fnb_fix p.copy { clear:both; color: #aaa; line-height: 2.0; font-size: 13px; padding-top: 1%;}
+
+}
+
+
+
+/* 데스트탑 */
+@media screen and (min-width:961px) and (max-width:1280px) { 
+
+    /*left_fix*/
+.left_fix { width: 20vw; height:100%; background-color: #000; position: fixed; left: 0; top: 0; z-index: 99; position:relative; float: left;}
+.left_fix .tnb { font-size: 25px; padding-top: 50px; padding-left: 20px; height: 250px;box-sizing: border-box; position: relative;}
+.left_fix .tnb li label { width: 100%; display: block; line-height: 2.0; color: #aaa; font-weight: 700; cursor: pointer;padding-left: 25px; box-sizing: border-box; }
+.left_fix .tnb li label:hover { color:#fff; }
+
+/* 서브메뉴: ul.에 공통 포지션 주면 됨*/
+.tnb .sub { position:absolute; height:200px;  left: 60px; top: 290px; transition: 0.4s; opacity: 0; visibility: hidden; color: #fff; }
+
+#r1:checked ~ .tnb .lst1 label { background-color: rgba(255,255,255,0.2); color:#fff;   }
+#r2:checked ~ .tnb .lst2 label { background-color: rgba(255,255,255,0.2); color:#fff; }
+#r3:checked ~ .tnb .lst3 label { background-color: rgba(255,255,255,0.2); color:#fff; }
+#r4:checked ~ .tnb .lst4 label { background-color: rgba(255,255,255,0.2); color:#fff; }
+
+#r1:checked ~ .tnb .lst1 .sub { opacity: 1; visibility: visible; }
+#r2:checked ~ .tnb .lst2 .sub { display: block; opacity: 1; visibility: visible; }
+#r3:checked ~ .tnb .lst3 .sub { display: block; opacity: 1; visibility: visible;  }
+#r4:checked ~  .tnb .lst4 .sub { display: block; opacity: 1; visibility: visible; }
+.left_fix .radio { display: none; }
+
+.left_fix .tnb .sub a { display: block; font-size: 19px; color: #aaa; line-height: 2.0; font-size: 20px; font-weight: 600;}
+.left_fix .tnb li a:hover { color: #fff; }
+
+
+
+/*ft*/
+.ft { width: 100%;  height: 20%; position: fixed; bottom: 8%; left: 0; z-index: 99; box-sizing: border-box; padding-left:50px; color: #fff;}
+.ft .tit { line-height: 2.0; }
+
+.ft p { line-height: 2.0 ;  }
+.ft p.add { width: 22vw;}
+.ft p.call:before { content: ""; display: block; width: 15px; height:15px; background-image: url("../sns/tell_s.png"); float: left; margin:10px 0 ;  margin-right: 10px; background-color: #fff; border-radius: 20px;}
+.ft .ft_box .sns { padding-top: 10px;}
+.ft .ft_box .sns li { float: left; width: 80px;  }
+
+.ft .ft_box .sns li a { display: block; float: left; text-indent: -9999px; width: 50px; height: 50px; border-radius:35px; border: 2px solid #fff;  background-color: #fff;}
+.ft .ft_box .sns li.sns1 a { background-image: url("../sns/face.png"); background-color: #fff;}
+.ft .ft_box .sns li.sns1 a:hover { border-color: #3a5a9b; background-color:#3a5a9b; }
+.ft .ft_box .sns li.sns2 a { background-image: url("../sns/insta.png");}
+.ft .ft_box .sns li.sns2 a:hover { border-color: #86358d; background-color:#86358d; }
+.ft .ft_box .sns li.sns3 a { background-image: url("../sns/kakao.png");}
+.ft .ft_box .sns li.sns3 a:hover {border-color: #f8ef2c; background-color:#f8ef2c; }
+.ft .ft_box .sns li.sns4 a { background-image: url("../sns/logo2.png"); background-color: #686969}
+.ft .ft_box .sns li.sns4 a:hover{ background-color:  #686969; border-color:#c40016; background-image: url("../sns/logo3.png"); }
+
+/*fnb_fix*/
+
+.fnb_fix { float: left; position: fixed; bottom:5%; right: 20px; width: 14%; height: 15%;  }
+.fnb_fix .info,.fnb_fix .info2 { width: 100%; height: 25%;  }
+.fnb_fix .info li{ width: 30%; height: 100%; float:left; }
+.fnb_fix .info li a { display: block; width: 100%; height: 100%;  color:#aaa; }
+
+.fnb_fix .info li a:hover { color: #fff; font-weight: 700; }
+
+.fnb_fix .info2 li { width: 50%; height: 100%; float:left; }
+.fnb_fix .info2 li a { display: block; width: 100%;     height: 100%; line-height: 2; color:#aaa; float:left; font-size: 13px; }
+.fnb_fix .info2 li.lst1 a:after { content:"|"; padding-left: 10%; box-sizing: border-box; }
+.fnb_fix .info2 li a:hover { color: #fff; font-weight: 700; }
+
+.fnb_fix p.copy { width: 75%; color: #aaa; line-height: 2.0; font-size: 13px;}
+.fnb_fix p.copy2 { width: 100%; color: #aaa; line-height: 2.0; font-size: 13px;}
+
+}
